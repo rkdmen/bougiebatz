@@ -12,38 +12,47 @@ angular.module('legacyOwls.comment', ["pageslide-directive"])
     $scope.refreshComment;
     $scope.newComment = []; //Temporary array for new comments added
 
-/*
-  Trending Article is commented for future feature.
-*/
 
 /***************************************
 *          For Trending Articles
 ***************************************/
 
-    // $scope.toggleTrending = function(index) {
-    //     $scope.checked = !$scope.checked
-    //     $scope.idx = index;
-    //     console.log($scope.idx)
-    //  Trending.getAll().then(function(res){
-    //    $scope.articleTitle; //Need to find articleTitle
-    //     $scope.article = res.data[$scope.idx];
-    //     // console.log(res.data[$scope.idx]);
-    //     console.log($scope.article.articleData, ' LINE 32, comment.js')
-    //     console.log(res.data);
-    //  })
-    //  $scope.submitComment = function(){
-    //     var sendToDB = {};
-    //     sendToDB.article = $scope.article.articleData;
-    //     var commentData = {}
-    //     commentData.articleTitle = $scope.article.title
-    //     commentData.user = $scope.username = 'Anonymous'; //grab user name
-    //     commentData.comment = $scope.userInputComment;
-    //     sendToDB.commentData = commentData;
-    //     Comment.postComment(sendToDB)
-    //     $scope.newComment.push($scope.userInputComment);
-    //     $scope.userInputComment = '';
-    // }
-    // }//End of Toggle Button for Article
+    $scope.toggleTrending = function(index) {
+        $scope.checked = !$scope.checked
+        $scope.idx = index;
+        console.log($scope.idx)
+     Trending.getAll().then(function(res){
+       $scope.articleTitle; //Need to find articleTitle
+        $scope.article = res.data[$scope.idx];
+        // console.log(res.data[$scope.idx]);
+        console.log($scope.article.commentData, ' LINE 32, comment.js')
+        console.log(res.data);
+        $scope.testComment = $scope.article.commentData;
+     })
+
+      $scope.refreshComment = function(){
+
+        //Comment.getallComment calls factory comment function to make a get request to
+        //database to retrieve all data to regarding to specific article that is clicked based on clicked index / article.
+        Comment.getAllComment($scope.article).then(function(res){
+           console.log(res, ' RES, comment.js')
+            // $scope.testComment = res.data;
+        })
+       }();
+
+     $scope.submitComment = function(){
+        var sendToDB = {};
+        sendToDB.article = $scope.article.articleData;
+        var commentData = {}
+        commentData.articleTitle = $scope.article.title
+        commentData.user = $scope.username = 'Anonymous'; //grab user name
+        commentData.comment = $scope.userInputComment;
+        sendToDB.commentData = commentData;
+        Comment.postComment(sendToDB)
+        $scope.newComment.push($scope.userInputComment);
+        $scope.userInputComment = '';
+    }
+    }//End of Toggle Button for Article
 
 
 /***************************************

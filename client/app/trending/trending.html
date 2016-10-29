@@ -33,7 +33,7 @@
     <div class='col-xs-12 col-md-4'>
       <a href={{article.articleData.url}} target="_blank">
        <img ng-src={{article.articleData.multimedia[3].url}} />
-      </a>  
+      </a>
     </div>
 
     <div class='textbox col-xs-12 col-md-8'>
@@ -41,7 +41,24 @@
       <p>{{article.articleData.byline}}</p>
       <p class="articleSummary">{{article.articleData.abstract}}</p>
       <p class="articlelikes"><i class="fa fa-thumbs-up faa-bounce animated" aria-hidden="true"></i>  {{article.numberLikes}}</p>
-    </div>      
+
+      <!-- Uncomment for Comment Form: need to fix styling / margin -->
+     <!--        <div class="comments" ng-controller="commentBox">
+        <a class="btn btn-default" href="" ng-click="toggleTrending($index)">Comment Form</a>
+        <div class="commentForm" pageslide ps-open="checked" ps-speed="0.25" ps-key-listener="true">
+          <div class="commentContainer">
+            <h4>Comments</h4>
+              <div ng-repeat="comment in testComment track by $index"> {{comment.comment}}</div>
+              <div ng-repeat="cmt in newComment track by $index">{{cmt}}</div>
+              <div class="inputBox">
+                <input class='input' type="text" ng-model="userInputComment">
+                <a class='btn btn-default' ng-click="submitComment(); refreshComment()">Submit</a>
+
+              </div>
+            </div>
+          </div>
+        </div> -->
+    </div>
 
   </div>
 
