@@ -12,9 +12,6 @@ angular.module('legacyOwls.comment', ["pageslide-directive"])
     $scope.refreshComment;
     $scope.newComment = []; //Temporary array for new comments added
 
-/*
-  Trending Article is commented for future feature.
-*/
 
 /***************************************
 *          For Trending Articles
@@ -28,9 +25,21 @@ angular.module('legacyOwls.comment', ["pageslide-directive"])
        $scope.articleTitle; //Need to find articleTitle
         $scope.article = res.data[$scope.idx];
         // console.log(res.data[$scope.idx]);
-        console.log($scope.article.articleData, ' LINE 32, comment.js')
+        console.log($scope.article.commentData, ' LINE 32, comment.js')
         console.log(res.data);
+        $scope.testComment = $scope.article.commentData;
      })
+
+      $scope.refreshComment = function(){
+
+        //Comment.getallComment calls factory comment function to make a get request to
+        //database to retrieve all data to regarding to specific article that is clicked based on clicked index / article.
+        Comment.getAllComment($scope.article).then(function(res){
+           console.log(res, ' RES, comment.js')
+            // $scope.testComment = res.data;
+        })
+       }();
+
      $scope.submitComment = function(){
         var sendToDB = {};
         sendToDB.article = $scope.article.articleData;

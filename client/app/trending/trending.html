@@ -42,7 +42,8 @@
       <p class="articleSummary">{{article.articleData.abstract}}</p>
       <p class="articlelikes"><i class="fa fa-thumbs-up faa-bounce animated" aria-hidden="true"></i>  {{article.numberLikes}}</p>
 
-            <div class="comments" ng-controller="commentBox">
+      <!-- Uncomment for Comment Form: need to fix styling / margin -->
+     <!--        <div class="comments" ng-controller="commentBox">
         <a class="btn btn-default" href="" ng-click="toggleTrending($index)">Comment Form</a>
         <div class="commentForm" pageslide ps-open="checked" ps-speed="0.25" ps-key-listener="true">
           <div class="commentContainer">
@@ -52,13 +53,11 @@
               <div class="inputBox">
                 <input class='input' type="text" ng-model="userInputComment">
                 <a class='btn btn-default' ng-click="submitComment(); refreshComment()">Submit</a>
-                <a ng-click="toggle()" class="btn btn-default" >Close</a>
 
               </div>
             </div>
           </div>
-        </div>
-
+        </div> -->
     </div>
 
   </div>
