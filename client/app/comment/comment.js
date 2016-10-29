@@ -20,30 +20,30 @@ angular.module('legacyOwls.comment', ["pageslide-directive"])
 *          For Trending Articles
 ***************************************/
 
-    // $scope.toggleTrending = function(index) {
-    //     $scope.checked = !$scope.checked
-    //     $scope.idx = index;
-    //     console.log($scope.idx)
-    //  Trending.getAll().then(function(res){
-    //    $scope.articleTitle; //Need to find articleTitle
-    //     $scope.article = res.data[$scope.idx];
-    //     // console.log(res.data[$scope.idx]);
-    //     console.log($scope.article.articleData, ' LINE 32, comment.js')
-    //     console.log(res.data);
-    //  })
-    //  $scope.submitComment = function(){
-    //     var sendToDB = {};
-    //     sendToDB.article = $scope.article.articleData;
-    //     var commentData = {}
-    //     commentData.articleTitle = $scope.article.title
-    //     commentData.user = $scope.username = 'Anonymous'; //grab user name
-    //     commentData.comment = $scope.userInputComment;
-    //     sendToDB.commentData = commentData;
-    //     Comment.postComment(sendToDB)
-    //     $scope.newComment.push($scope.userInputComment);
-    //     $scope.userInputComment = '';
-    // }
-    // }//End of Toggle Button for Article
+    $scope.toggleTrending = function(index) {
+        $scope.checked = !$scope.checked
+        $scope.idx = index;
+        console.log($scope.idx)
+     Trending.getAll().then(function(res){
+       $scope.articleTitle; //Need to find articleTitle
+        $scope.article = res.data[$scope.idx];
+        // console.log(res.data[$scope.idx]);
+        console.log($scope.article.articleData, ' LINE 32, comment.js')
+        console.log(res.data);
+     })
+     $scope.submitComment = function(){
+        var sendToDB = {};
+        sendToDB.article = $scope.article.articleData;
+        var commentData = {}
+        commentData.articleTitle = $scope.article.title
+        commentData.user = $scope.username = 'Anonymous'; //grab user name
+        commentData.comment = $scope.userInputComment;
+        sendToDB.commentData = commentData;
+        Comment.postComment(sendToDB)
+        $scope.newComment.push($scope.userInputComment);
+        $scope.userInputComment = '';
+    }
+    }//End of Toggle Button for Article
 
 
 /***************************************
