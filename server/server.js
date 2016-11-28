@@ -49,7 +49,7 @@ app.get('/database', (req, res) => {
   var id = req.user._id;
   database.User.findById(id, function (err, doc){
     if(err) {
-      console.log("Not appropriately getting info from the database"); 
+      console.log("Not appropriately getting info from the database");
       throw new Error(err);
     }
     // console.log(doc);
@@ -81,7 +81,7 @@ app.get('/likes', (req, res) => {
 app.post('/likes', (req, res) => {
   database.User.update(
     { _id: req.user._id },
-    { $push: { likedStories: req.body } }  
+    { $push: { likedStories: req.body } }
   )
   .then(res.status(201).send(req.data));
 });
