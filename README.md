@@ -3,19 +3,6 @@ Legacy Team:
   Development Team: Katie Barnes, John Jung
   Scrumlord: Canh Trinh
 
-Team Name: Legacy-Owls
-
-Original Project Authors:
-    - Sam Gowda
-    - Jake Smith
-    - Nav Ghuman
-    - Julia Randall
-
-Project: 
-  - To take the existing visual news app and add features 
-
-What's in this repo?
-
 * Client: 
   - frontend based on Angular framework
       - App sub-folders
@@ -62,6 +49,8 @@ What's in this repo?
 
 Installing dependencies and Getting Started
 
+```
 - run “npm install” - all node dependencies are listed in package.json
 - In a separate tab in the terminal, run “mongod” to start mongo up
 - In a separate tab in the terminal, run “gulp” to start our server and app
+```
