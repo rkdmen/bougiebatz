@@ -1,7 +1,3 @@
-Legacy Team:
-  Product Owner: Sara Sailors
-  Development Team: Katie Barnes, John Jung
-  Scrumlord: Canh Trinh
 
 * Client: 
   - frontend based on Angular framework
@@ -17,8 +13,7 @@ Legacy Team:
   - SASS directory that controls styling. CSS directory is automatically compiled
     after GULP is run, i.e. not touched manually! We have ignored it because it rebuilds automatically,
     but delete as needed and it will recompile.
-  - Assets - we saved and hard coded some of the angular files within the JS folder in assets because Katie
-    had some issues with Bower and using chocolatey on her windows computer
+  
 
 * Client_old:
   - Client files written by the original team, written in React
