@@ -1,47 +1,42 @@
 <header class="navigation col-xs-12">
-    <div class="logo col-xs-6 col-md-2">
-        <img src="../../assets/icon.png">
-    </div>
-    <div class="heading col-xs-12 col-md-8">
-        Visual News
-    </div>
-    <div class="switchPage col-xs-6 col-md-2">
-        <a class="btn btn-default" ng-disabled="disabled" href="#/login">Login</a>
-    </div>
+  <div class="logo col-xs-6 col-md-2">
+    <img src="../../assets/icon.png">
+  </div>
+  <div class="heading col-xs-12 col-md-8">
+    Visual News
+  </div>
+  <div class="switchPage col-xs-6 col-md-2">
+    <a class="btn btn-default" ng-disabled="disabled" href="#/login">Login</a>
+  </div>
 </header>
-
 <div class="col-xs-12">
-    <video loop muted autoplay src="https://dl.dropboxusercontent.com/s/126l5o9woivl3u8/GettyImages-500107419.mp4?dl=0"
-           poster="../../assets/icon.png" class="fullscreen-bg__video">
-    </video>
+  <video loop muted autoplay src="https://dl.dropboxusercontent.com/s/126l5o9woivl3u8/GettyImages-500107419.mp4?dl=0" poster="../../assets/icon.png" class="fullscreen-bg__video">
+  </video>
 </div>
-
 <div class="login_body col-xs-12">
-    <div class="other col-xs-12 col-md-6">
-
+  <div class="other col-xs-12 col-md-6">
+  </div>
+  <div id="login" class="col-xs-12 col-md-6">
+    <div class="tagline col-xs-12">
+      <h3> Owls. Leaving a Legacy of Greatness.</h3>
     </div>
-    <div id="login" class="col-xs-12 col-md-6">
-        <div class="tagline col-xs-12">
-            <h3>Astonishing Owls. Leaving a Legacy of Greatness.</h3>
-        </div>
-        <h1>Register</h1>
-        <div ng-show="error" class="alert alert-danger">{{errorMessage}}</div>
-        <form class="form" ng-submit="register()">
-            <div class="form-group">
-                <label>Username</label>
-                <input type="text" class="form-control" name="username" ng-model="registerForm.username" required>
-            </div>
-            <div class="form-group">
-                <label>Password</label>
-                <input type="password" class="form-control" name="password" ng-model="registerForm.password" required>
-            </div>
-            <div>
-                <button type="submit" class="btn btn-default" ng-disabled="disabled">Register</button>
-            </div>
-        </form>
-    </div>
+    <h1>Register</h1>
+    <div ng-show="error" class="alert alert-danger">{{errorMessage}}</div>
+    <form class="form" ng-submit="register()">
+      <div class="form-group">
+        <label>Username</label>
+        <input type="text" class="form-control" name="username" ng-model="registerForm.username" required>
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" name="password" ng-model="registerForm.password" required>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-default" ng-disabled="disabled">Register</button>
+      </div>
+    </form>
+  </div>
 </div>
-
 <footer class="footer col-xs-12">
-    <p>Updated with <i class="fa fa-heart faa-pulse animated" aria-hidden="true"></i> by Astonishing Owls Inc. </p>
+  <p>Updated with <i class="fa fa-heart faa-pulse animated" aria-hidden="true"></i> by Owls Inc. </p>
 </footer>

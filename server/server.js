@@ -57,7 +57,7 @@ app.get('/database', (req, res) => {
   });
 });
 
-app.post('/database', (req, res) => {
+app.post('/database', (req, res) => {z
   database.User.update(
     { _id: req.user._id },
     { $push: { savedStories: req.body } }

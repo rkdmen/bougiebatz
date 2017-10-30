@@ -17,7 +17,7 @@ legacyOwls.config(function ($routeProvider) {
       .when('/', {
           templateUrl: 'app/latest/latest.html',
           controller: 'latest',
-          access: {restricted: true}
+          access: {restricted: false}
       })
       .when('/login', {
           templateUrl: 'app/auth/login.html',
@@ -26,7 +26,7 @@ legacyOwls.config(function ($routeProvider) {
       })
       .when('/logout', {
           controller: 'logoutController',
-          access: {restricted: true}
+          access: {restricted: false}
       })
       .when('/register', {
           templateUrl: 'app/auth/register.html',
@@ -36,17 +36,17 @@ legacyOwls.config(function ($routeProvider) {
        .when('/latest', {
            templateUrl: 'app/latest/latest.html',
            controller: 'latest',
-           access: {restricted: true}
+           access: {restricted: false}
        })
        .when('/trending', {
            templateUrl: 'app/trending/trending.html',
            controller: 'trendingController',
-           access: {restricted: true}
+           access: {restricted: false}
        })
        .when('/savedStory', {
            templateUrl: 'app/savedStory/savedStory.html',
            controller: 'savedStoryController',
-           access: {restricted: true}
+           access: {restricted: false}
        })
       .otherwise({
           redirectTo: '/'

@@ -9,7 +9,6 @@
     <a ng-click='logout()' class="btn btn-default">Logout</a>
   </div>
 </header>
-
 <div class="secondaryNav col-xs-12">
   <div class="buttonWrapper col-xs-12 col-md-4">
     <a class="btn btn-default" ng-disabled="disabled" href="#/latest">Latest</a>
@@ -21,31 +20,24 @@
     <a class="btn btn-default current" ng-disabled="disabled" href="#/savedStory">Saved Stories</a>
   </div>
 </div>
-
 <div class="main-trending col-xs-12">
   <h1 class="col-xs-12">Your saved stories</h1>
-
   <div class="trendingButton col-xs-12">
     <a class="btn btn-default" ng-disabled="disabled" ng-click="downloadArticles()">Refresh</a>
   </div>
-
   <div class='photos col-xs-12' ng-repeat='article in savedArticles'>
     <div class='col-md-4'>
       <a href={{article.url}} target="_blank">
        <img ng-src={{article.multimedia[3].url}} />
-      </a>  
+      </a>
     </div>
-
     <div class='textbox col-md-8'>
       <h3>{{article.title}}</h3>
       <p>{{article.byline}}</p>
       <p class="articleSummary">{{article.abstract}}</p>
-    </div>      
-
+    </div>
   </div>
-
 </div>
-
 <footer class="footer col-xs-12">
-  <p>Updated with <i class="fa fa-heart faa-pulse animated" aria-hidden="true"></i> by Astonishing Owls Inc. </p>
+  <p>Updated with <i class="fa fa-heart faa-pulse animated" aria-hidden="true"></i> </p>
 </footer>
