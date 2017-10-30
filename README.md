@@ -1,20 +1,3 @@
-Legacy Team:
-  Product Owner: Sara Sailors
-  Development Team: Katie Barnes, John Jung
-  Scrumlord: Canh Trinh
-
-Team Name: Legacy-Owls
-
-Original Project Authors:
-    - Sam Gowda
-    - Jake Smith
-    - Nav Ghuman
-    - Julia Randall
-
-Project: 
-  - To take the existing visual news app and add features 
-
-What's in this repo?
 
 * Client: 
   - frontend based on Angular framework
@@ -30,8 +13,7 @@ What's in this repo?
   - SASS directory that controls styling. CSS directory is automatically compiled
     after GULP is run, i.e. not touched manually! We have ignored it because it rebuilds automatically,
     but delete as needed and it will recompile.
-  - Assets - we saved and hard coded some of the angular files within the JS folder in assets because Katie
-    had some issues with Bower and using chocolatey on her windows computer
+  
 
 * Client_old:
   - Client files written by the original team, written in React
@@ -62,6 +44,8 @@ What's in this repo?
 
 Installing dependencies and Getting Started
 
+```
 - run “npm install” - all node dependencies are listed in package.json
 - In a separate tab in the terminal, run “mongod” to start mongo up
 - In a separate tab in the terminal, run “gulp” to start our server and app
+```
